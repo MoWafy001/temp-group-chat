@@ -28,7 +28,7 @@ const displayMessage = (message, user = username) => {
     if (user === username) {
         sendMessage(message);
     }
-    document.hidden && notify.play()
+    if (document.hidden || user === "room") notify.play();
 }
 
 
