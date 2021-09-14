@@ -3,4 +3,4 @@
 
 # Info
 The user goes to the home page, clicks `"create room"`, then gets redirected to a room with a generated id.
-The user to then share the room link with whome they want to add to the chat. The messages are not stored. If they leave, the messages are gone.
+The user could then share the room link with whome they want to add to the chat. The messages are not stored. If they leave, the messages are gone.
