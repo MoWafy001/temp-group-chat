@@ -1,5 +1,5 @@
 # temp-group-chat
-(heroku link)[https://one-time-group-chat.herokuapp.com/] (if it doesn't work, I might have deleted it)
+[heroku link](https://one-time-group-chat.herokuapp.com/) (if it doesn't work, I might have deleted it)
 
 # Info
 The user goes to the home page, clicks `"create room"`, then gets redirected to a room with a generated id.
