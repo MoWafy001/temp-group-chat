@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Chat</title>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        var ROOM_ID = "<%=roomId%>";
+        var username;
+    </script>
+
+    <script src="/script.js" defer></script>
+    <script src="/setup.js" defer></script>
+
+    <style>
+        .message-body{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .message{
+            display: block;
+        }
+        .view{
+            padding: 0.5em;
+        }
+        .messages{
+            height: calc( 100% - 3em  );
+            overflow: auto;
+        }
+        .notice {
+            color: goldenrod;
+        }
+        .me-message{
+            color: chartreuse;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body style="background: #000;">
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="/" class="navbar-brand mb-0 h1 mx-auto">Chat</a>
+    </nav>
+    <div class="container mt-4">
+        <div id="input-name" class="input-group w-70 mx-auto mb-3 filter">
+            <div class="input-group-prepend">
+                <span class="input-group-text border-0" id="basic-addon1">Your name</span>
+            </div>
+            <input type="text" class="col-2 form-control bg-dark text-light border-0" placeholder="Type your name" aria-label="name"
+                aria-describedby="basic-addon1" style="box-shadow: none; outline: none; z-index: 0;">
+            <span id="input-name-submit" class="btn btn-primary col-2 border-0">ok</span>
+        </div>
+
+        <div class="row">
+        </div>
+
+        <div class="view bg-dark" style="height: 70vh;">
+            <input id="chat-input" type="text" class="form-control bg-dark text-light border-0 rounded-0" placeholder="type here..." style="font-family: 'Courier New', Courier, monospace; box-shadow: 0 1px 1px 0px #000; margin-bottom: 0.5em; height: 2em;">
+            <div class="messages text-light"></div>
+        </div>
+        <a style="font-size: small;" id="roomlink" href="" class="btn btn-secondary text-light mt-2 m-auto">Chat link (click to copy)</a>
+    </div>
+</body>
+
+</html>
