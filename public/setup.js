@@ -1,4 +1,5 @@
-console.log("hello1");
+var notify = new Audio("/tone.mp3");
+notify.volume = 0.5
 
 // functions
 const getName = () => {
@@ -27,6 +28,7 @@ const displayMessage = (message, user = username) => {
     if (user === username) {
         sendMessage(message);
     }
+    document.hidden && notify.play()
 }
 
 
